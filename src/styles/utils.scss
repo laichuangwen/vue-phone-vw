@@ -1,0 +1,43 @@
+
+// color
+$bg: #F9F9F9;
+$bd: #e0e0e0;
+$btn-bg: #f0f0f0;
+$gray: #666666;
+$graytext: #999999;
+$blue: #10A4F5;
+$orange: #ff8400;
+$red: #FE0000;
+$green:#29bcc6;
+
+// 背景图片
+@mixin icon($url) {
+    background-image: $url;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin iconbg() {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// 多行文本溢出
+@mixin clamp($n) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $n;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// flex布局和子元素对其方式
+@mixin flex($horizontal: center,
+$vertical: center) {
+    display: flex;
+    justify-content: $horizontal;
+    align-items: $vertical;
+}
+

@@ -1,0 +1,106 @@
+@import "animate.css";
+/**
+*过度动画集合
+*/
+
+//淡入淡出过渡
+.fade-enter-active{
+	transition:all .3s linear;
+}
+.fade-leave-active{
+	opacity:0;
+	transition:all .3s linear;
+}
+.fade-enter{
+	opacity:0;
+}
+
+// 上下滑动过渡:向子页面跳转
+.slide-fade-enter-active{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	transition:all .3s linear;
+}
+
+.slide-fade-enter{
+	transform: translateY(4%);
+	opacity: 0;
+}
+
+// 上下滑动过渡:向父页面跳转
+.slide-fade-back-leave-active{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity: 0;
+	transform: translateY(10%);
+	transition:all .3s linear;
+}
+
+// 下拉单选过渡
+.select-slide-enter-active{
+    transition:all .3s ease-in-out;
+}
+.select-slide-leave-active{
+    opacity:0;
+    transform: rotateX(90deg)!important;
+    transition:all .3s ease-in-out;
+}
+.select-slide-enter{
+    opacity:0;
+    transform: rotateX(90deg)!important;
+}
+
+// 弹框打开与关闭过渡(放大缩小)
+.modal-transition-enter-active{
+    transition:all .3s ease-in-out;
+    .modal-box {
+        transition:all .3s ease-in-out;
+    }
+}
+.modal-transition-leave-active{
+    background: transparent!important;
+    transition:all .3s ease-in-out;
+    .modal-box {
+    	opacity: 0;
+    	transform: scale(0);
+        transition:all .3s ease-in-out;
+    }
+}
+.modal-transition-enter{
+    background: transparent!important;
+    .modal-box {
+    	opacity: 0;
+    	transform: scale(0);
+    }
+}
+
+// 弹框打开与关闭过渡(从下弹出)
+.modal-up-enter-active{
+    transition:all .3s ease-in-out;
+    .modal-box {
+        transition:all .3s ease-in-out;
+    }
+}
+.modal-up-leave-active{
+    background: transparent!important;
+    transition:all .3s ease-in-out;
+    .modal-box {
+    	opacity: 0;
+    	transform: translateY(100%);
+        transition:all .3s ease-in-out;
+    }
+}
+.modal-up-enter{
+    background: transparent!important;
+    .modal-box {
+    	opacity: 0;
+    	transform: translateY(100%);
+    }
+}
+
+
+

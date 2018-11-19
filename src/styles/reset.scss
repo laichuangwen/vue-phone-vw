@@ -1,0 +1,90 @@
+
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div,
+dl,
+dt,
+dd,
+input,
+p,
+a,
+section,
+figure,
+figcaption,
+hgroup,
+pre,
+i,
+textarea {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Microsoft YaHei';
+  color: #333;
+  background-color: $bg;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none !important;
+}
+
+input,
+button {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  font-family: 'Microsoft YaHei';
+}
+
+button {
+  -webkit-user-select: none;
+}
+
+img {
+  content: normal !important;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-family: 'Microsoft YaHei';
+}
+
+i {
+  font-style: normal;
+}
