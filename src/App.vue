@@ -1,15 +1,12 @@
 <template>
     <div id="app">
         <!--模拟手机缓存方式-->
-
-
             <!--默认tabbar 没有动画-->
             <transition :enter-active-class="$route.meta.animation">
                 <keep-alive :include="$store.state.keepAlive.keepList" :exclude="$store.state.keepAlive.excludeList">
                 <router-view></router-view>
                 </keep-alive>
             </transition >
-
         <!--兼容ios 不能margin-bottom-->
         <div class="tabbar-content" v-if="$route.meta.tabBar"></div>
         <xl-tabbar :tabBarList="tabbar" v-if="$route.meta.tabBar"></xl-tabbar>
@@ -56,6 +53,8 @@
             setTimeout(()=>{
                 this.$initLoading(false);
             },3000)
+            this.$setSST('xiaolai','123456987dsfadasfadf');
+            console.log('解密',this.$getSST('xiaolai'));
 
         }
     }
@@ -63,10 +62,9 @@
 
 <style lang="scss" type="text/scss">
     @import "styles/utils";
-
     #app {
         background-color: $bg;
-        height: 100%;
+        height: 100%;/*注意height: 100%会影响获取滑动top 事件的，用这个的时候要注意*/
     }
     .tabbar-content {
         height: 100px;

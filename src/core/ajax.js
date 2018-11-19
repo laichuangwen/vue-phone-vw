@@ -1,7 +1,10 @@
 import axios from 'axios'
 import qs from 'qs'
 import { Toast } from 'mint-ui';
-axios.defaults.baseURL =''
+axios.defaults.baseURL = process.env.NODE_ENV === 'production' ?
+    process.env.VUE_APP_BASE_URL :
+    ''
+    || process.env.VUE_APP_BASE_URL;
 // 配置超时时间
 axios.defaults.timeout = 300e3
 // 请求拦截器
